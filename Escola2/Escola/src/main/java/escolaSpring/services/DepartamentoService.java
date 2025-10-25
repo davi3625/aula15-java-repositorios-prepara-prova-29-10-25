@@ -1,0 +1,32 @@
+package escolaSpring.services;
+
+import escolaSpring.entities.Aluno;
+import escolaSpring.entities.Departamento;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.Optional;
+
+
+@Service
+public class DepartamentoService {
+
+
+
+        @Autowired
+        private DepartamentoService departamentoService;
+
+        public List<Departamento> findAll(){
+
+            return departamentoService.findAll();
+        }
+
+        public Departamento findById(Long id){
+            Optional<Departamento> obj = .findById(id);
+            return obj.get();
+        }
+
+
+    }
+
